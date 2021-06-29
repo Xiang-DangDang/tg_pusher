@@ -10,9 +10,11 @@ type Utils struct {
 }
 
 func (u Utils) MyId(Command string, message *tgbotapi.Message, parameters ...string) {
-	if message.Chat.Title == "" {
+	// title 不为 "" 表示是一个群聊
+	if message.Chat.Title != "" {
 		return
 	}
+
 	username := message.From.FirstName + message.From.LastName
 	msg := tgbotapi.NewMessage(message.Chat.ID, fmt.Sprintf("Hi, %s \n\n你的 Telegram ID 为 %d", username, message.From.ID))
 
