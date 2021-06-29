@@ -28,7 +28,7 @@ func Send(ctx echo.Context) error {
 	} else {
 		req.Text = ctx.QueryParam("text")
 		req.SendKey = ctx.QueryParam("sendkey")
-		req.ParseMode = ctx.QueryParam("")
+		req.ParseMode = ctx.QueryParam("parse_mode")
 	}
 
 	token := strings.Split(req.SendKey, ":")
