@@ -1,0 +1,30 @@
+{
+  "name": "tg_pusher",
+  "description": "Deploy tg_pusher on Heroku.",
+  "keywords": [
+    "tg_pusher"
+  ],
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "机器人 token",
+      "value": ""
+    },
+    "SECRET_ID": {
+      "description": "随机加密ID",
+      "generator": "secret"
+    },
+    "OWNER_ID": {
+      "description": "所有者 TG ID",
+      "value": ""
+    },
+    "SITE_URL": {
+      "description": "访问域名地址",
+      "value": "https://tg-pusher.herokuapp.com",
+      "required": false
+    }
+  },
+  "success_url": "/",
+  "website": "https://tg-pusher.herokuapp.com/",
+  "repository": "https://github.com/Xiang-DangDang/tg_pusher",
+  "stack": "heroku-20"
+}
